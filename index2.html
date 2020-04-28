@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Language" content="ru">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">	
+
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="js/dm-modal.js"></script>
+<title>Форма заказа</title>
+</head>
+
+<body>
+	<a class="poplight" rel="popup_contact" href="#?w=335">Сделать заказ</a>
+	<div id="popup_contact" class="popup_block">
+	
+	<form id="forma" class="contact_form" method="post" action="mail/sendletter.php" name="contact_form">
+  <fieldset>
+ <legend><h2>Сделать заказ</h2></legend>
+  <p style=”line-height:1.5; text-align:left”>
+    <label for="t1"><b>Ваш номер телефона</b></label>
+	<input type="text" id="t1" name="numper.phone" placeholder="8999999999" required pattern="8.+">
+  </p>
+  <p>
+    <label for="t1"><b>Выберите пасту </b><abbr title="Обязательное поле">*</abbr></label>
+    <input type="text" id="t2" name="pasta" list="l1"  placeholder="открыть список ->" required>
+    <datalist id="l1">
+      <option>Паста ''Карбонара''</option>
+      <option>Спагетти ''Наполи''</option>
+      <option>Паста с соусом ''Болоньезе''</option>
+      <option>Паста ''Паппарделле''</option>
+      <option>Паста под сливочным соусом ''Песто''</option>
+      <option>Паста ''Лингуини'' с помидорами и креветками</option>
+	  <option>Острая паста с курицей</option>
+	  <option>Лазанья ''Аль Форно''</option>
+	  <option>Пельмени ''Тортеллини''</option>
+    </datalist>
+  </p>
+  <p>
+    <label for="t2"><b>Способ доставки</b></label>
+   <ul> 
+	<li><input type="radio" required name="title" id="r1" value="Mr"><label for="r1">Доставка курьером</label></li>
+    <li><input type="radio" required name="title" id="r2" value="Ms"><label for="r2">Самовывоз</label></li>
+   </ul> 	
+  </p>
+  <p>
+    <label for="t3"><b>Ваши пожелания</b></label>
+    <textarea id="t3" name="msg" maxlength="140" rows="5" placeholder="Не добавлять помидоры, добавить больше сыра и т.д."></textarea>
+  </p>
+  <p>
+    <button class="submit" type="submit">Отправить</button>
+  </p>
+   </fieldset>
+</form>
+</div>
+</body>
+</html>

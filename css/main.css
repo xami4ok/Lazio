@@ -113,6 +113,7 @@ h5, h6          { font-weight: bolder }
 
     header .logo{
         margin-top: 100px;
+		padding-left: 15px;
     }
 
     header nav ul{
@@ -137,11 +138,18 @@ h5, h6          { font-weight: bolder }
 
     header nav ul li a:hover,
     header nav ul li a.selected{
-        color: #969595;
+        color: #000000;
+		
     }
-
+    
+	.b {
+	 font-size: 35px;
+	}
+	
     .selected {
-	 font-size: 25px;	
+	 font-size: 35px;
+     padding-left: 50px;
+     padding-bottom: 50px;	 
     }
 
     header .footer{
